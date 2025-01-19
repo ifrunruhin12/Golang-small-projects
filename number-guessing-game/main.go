@@ -577,24 +577,24 @@ func impossible_level_scoring(username string, attempt int) {
 func main() {
     welcome()
     username, difficulty := input()
-    level_1 := casual_level()
-    level_2 := standard_level()
-    level_3 := challenging_level_1()
-    level_4 := challenging_level_2()
-    level_5 := extreme_level()
-    level_6 := impossible_level()
 
     if (difficulty == 1) {
+        level_1 := casual_level()
         casual_level_scoring(username, level_1)
     } else if (difficulty == 2) {
+        level_2 := standard_level()
         standard_level_scoring(username, level_2)
     } else if (difficulty == 3) {
+        level_3 := challenging_level_1()
         challenging_level_1_scoring(username, level_3)
     } else if (difficulty == 4) {
+        level_4 := challenging_level_2()
         challenging_level_2_scoring(username, level_4)
     } else if (difficulty == 5) {
+        level_5 := extreme_level()
         extreme_level_scoring(username, level_5)
     } else {
+        level_6 := impossible_level()
         impossible_level_scoring(username, level_6)
     }
 }
