@@ -91,11 +91,11 @@ func (todos *Todos) print() {
 	table.SetRowLines(false)
 	table.SetHeaders("#", "Title", "Completed", "Created At", "Completed At")
 	for index, t := range *todos {
-		completed := "X"
+		completed := "❌"
 		completedAt := ""
 
 		if t.Completed {
-			completed = "V"
+			completed = "✅"
 			if t.CompletedAt != nil {
 				completedAt = t.CompletedAt.Format(time.RFC1123)
 			}
